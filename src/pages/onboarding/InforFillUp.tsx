@@ -96,8 +96,8 @@ function InforFillUp() {
             />
           </CardContent>
           <CardFooter className="flex justify-between">
-            <Button type="button" variant={"secondary"}>
-              Back
+            <Button type="button" variant={"ghost"}>
+              Cancel
             </Button>
             <Button type="submit">Submit</Button>
           </CardFooter>
