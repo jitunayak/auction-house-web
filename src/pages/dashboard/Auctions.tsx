@@ -6,6 +6,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { IAuction } from "@/types";
+import { CalendarIcon, MapPinIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function Auctions() {
@@ -20,12 +21,12 @@ export default function Auctions() {
   if (!data) return <div>Loading...</div>;
 
   return (
-    <div className="mt-14 px-4 space-y-4 grid justify-center">
+    <div className="mt-20 px-4 space-y-4 grid justify-center">
       <h1 className="text-xl font-semibold">Upcoming Auctions</h1>
-      <div className="w-fit grid grid-cols-4 gap-10">
+      <div className="w-fit grid  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         {data.map((auction) => (
           <div key={auction.id} className="w-[300px]">
-            <Card className="hover:shadow-md">
+            <Card className="hover:shadow-md cursor-pointer">
               <CardHeader>
                 <CardTitle>{auction.name}</CardTitle>
                 <CardDescription>{auction.description}</CardDescription>
@@ -36,9 +37,35 @@ export default function Auctions() {
                   alt={auction.name}
                   className="rounded pb-2 h-[200px] w-full object-cover"
                 />
-                <p>Current Price: &#8377;{auction.currentPrice}</p>
-                <p>Highest Bid: &#8377;{auction.highestBid}</p>
-                <p>Highest Bidder: &#8377;{auction.highestBidder}</p>
+                <p>
+                  Bidding Price &#8377;
+                  {Number(auction.currentPrice).toLocaleString()}
+                </p>
+                <div className="py-2 flex space-x-4 inset-0">
+                  <span className="pt-1">
+                    <MapPinIcon className="w-5 h-5 " />
+                  </span>
+                  <span>
+                    <span>
+                      <p className="text-zinc-400 font-light">Location</p>
+                      <p className="text-sm font-semibold">
+                        {auction.location}
+                      </p>
+                    </span>
+                  </span>
+                </div>
+
+                <div className="py-2 flex space-x-4 inset-0">
+                  <span className="pt-1">
+                    <CalendarIcon className="w-5 h-5 " />
+                  </span>
+                  <span>
+                    <p className="text-zinc-400 font-light">Auction Date </p>
+                    <p className="text-sm font-semibold">
+                      {new Date(auction.bidDate).toLocaleString()}
+                    </p>
+                  </span>
+                </div>
               </CardContent>
             </Card>
           </div>

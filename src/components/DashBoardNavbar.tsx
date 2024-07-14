@@ -14,7 +14,7 @@ function DashBoardNavbar() {
     });
   };
   return (
-    <header className="fixed top-0 right-0 left-0 w-full flex items-center justify-between  px-4 py-2 z-[100] backdrop-blur-lg">
+    <header className="fixed top-0 right-0 left-0 w-full flex items-center justify-between  px-4 py-4 z-[100] backdrop-blur-lg shadow-sm">
       <Link to="/">
         <div className="text-xl font-semibold bg-red-50 rounded text-red-600 p-1">
           Auction House
