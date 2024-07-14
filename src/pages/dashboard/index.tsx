@@ -2,6 +2,7 @@ import DashBoardNavbar from "@/components/DashBoardNavbar";
 import { useAuthSlice } from "@/hooks/useAuthSlice";
 import { useNavigate } from "@tanstack/react-router";
 import { useEffect } from "react";
+import Auctions from "./Auctions";
 
 function DashBoard() {
   const navigate = useNavigate();
@@ -17,6 +18,7 @@ function DashBoard() {
   return (
     <div>
       <DashBoardNavbar />
+      <Auctions />
     </div>
   );
 }

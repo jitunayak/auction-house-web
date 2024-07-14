@@ -17,11 +17,19 @@ declare module "@tanstack/react-router" {
 
 // Render the app
 const rootElement = document.getElementById("root")!;
+
+async function deferRender() {
+  const { worker } = await import("@/mocks/browser-mock.ts");
+  return worker.start();
+}
+
 if (!rootElement.innerHTML) {
-  const root = ReactDOM.createRoot(rootElement);
-  root.render(
-    <StrictMode>
-      <RouterProvider router={router} />
-    </StrictMode>
-  );
+  deferRender().then(() => {
+    const root = ReactDOM.createRoot(rootElement);
+    root.render(
+      <StrictMode>
+        <RouterProvider router={router} />
+      </StrictMode>
+    );
+  });
 }
