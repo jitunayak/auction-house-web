@@ -11,7 +11,7 @@ function Home() {
         <div className="flex justify-center flex-col items-center">
           <h1
             style={{ fontFamily: "Playwrite CU" }}
-            className="p-10 font-bold cursor-pointer text-[80px] lg:text-9xl text-center  bg-gradient-to-tr from-red-600 to-purple-600 bg-clip-text text-transparent"
+            className="p-10 font-bold cursor-pointer text-[66px] lg:text-9xl text-center  bg-gradient-to-tr from-red-600 to-purple-600 bg-clip-text text-transparent"
           >
             Auction House
           </h1>
