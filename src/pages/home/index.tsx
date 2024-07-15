@@ -9,10 +9,7 @@ function Home() {
       <Navbar />
       <AuroraBackground>
         <div className="flex justify-center flex-col items-center">
-          <h1
-            style={{ fontFamily: "Playwrite CU" }}
-            className="p-10 font-bold cursor-pointer text-[66px] lg:text-9xl text-center  bg-gradient-to-tr from-red-600 to-purple-600 bg-clip-text text-transparent"
-          >
+          <h1 className="p-10 font-bold cursor-pointer text-[70px] lg:text-9xl text-center  bg-gradient-to-tr from-red-600 to-purple-600 bg-clip-text text-transparent">
             Auction House
           </h1>
           <span className="text-2xl text-zinc-700 dark:text-zinc-400">

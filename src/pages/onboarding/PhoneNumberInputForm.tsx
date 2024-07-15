@@ -7,9 +7,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Checkbox } from "@/components/ui/checkbox";
 import { InputPhone } from "@/components/ui/input-phone";
 import { Label } from "@/components/ui/label";
 import { useAuthSlice } from "@/hooks/useAuthSlice";
+import { MessageCircleMoreIcon } from "lucide-react";
 
 export default function PhoneNumberInputForm() {
   const { nextStage, setUser, user } = useAuthSlice();
@@ -22,12 +24,13 @@ export default function PhoneNumberInputForm() {
     setUser({
       ...user,
       phoneNumber: e.currentTarget.phone.value.trim().replace(/\D/g, ""),
+      subsribedToWhatsapp: e.currentTarget.subscribeToWhatsapp.checked,
     });
     nextStage();
   }
   return (
     <form onSubmit={handleSubmit}>
-      <Card className="w-96  p-2">
+      <Card className="w-96 p-2 border-none">
         <CardHeader>
           <CardTitle className="text-2xl">Login</CardTitle>
           <CardDescription>Enter your phone number to sign in.</CardDescription>
@@ -43,14 +46,16 @@ export default function PhoneNumberInputForm() {
               placeholder="Enter a phone number"
               defaultCountry="IN"
             />
-            {/* <Input
-              id="phone"
-              type="tel"
-              placeholder="+91 (555) 555-5555"
-              pattern="^+?d{1,3}[- ]?(?d{3})?[- ]?d{3}[- ]?d{4}$"
-              required
-              className="p-6 text-lg"
-            /> */}
+          </div>
+          <div className="flex items-center space-x-2 pt-6">
+            <Checkbox id="subscribeToWhatsapp" />
+            <label
+              htmlFor="subscribeToWhatsapp"
+              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            >
+              Update me on whatsapp
+            </label>
+            <MessageCircleMoreIcon className="h-5 w-5 text-green-600" />
           </div>
         </CardContent>
         <CardFooter>

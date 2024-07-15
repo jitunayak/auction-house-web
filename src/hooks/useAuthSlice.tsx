@@ -10,6 +10,7 @@ export type IUser = {
   countryCode: string;
   preferences: string[];
   isAuthenticated: boolean;
+  subsribedToWhatsapp: boolean;
 };
 
 type Store = {
@@ -32,6 +33,7 @@ const createStore = persist<Store>(
       countryCode: "",
       preferences: [] as string[],
       isAuthenticated: false,
+      subsribedToWhatsapp: false,
     },
     setUser: (user) => set({ user }),
     onboardingStage: 0,
