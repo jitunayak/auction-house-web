@@ -49,7 +49,7 @@ function InforFillUp() {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)}>
-        <Card>
+        <Card className="w-96">
           <CardHeader>
             <CardTitle>Personal Information</CardTitle>
             <CardDescription>Fill in your personal information</CardDescription>

@@ -27,7 +27,7 @@ export default function PhoneNumberInputForm() {
   }
   return (
     <form onSubmit={handleSubmit}>
-      <Card className="w-full max-w-md p-4">
+      <Card className="w-96  p-2">
         <CardHeader>
           <CardTitle className="text-2xl">Login</CardTitle>
           <CardDescription>Enter your phone number to sign in.</CardDescription>

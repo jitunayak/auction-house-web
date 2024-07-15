@@ -11,6 +11,9 @@ module.exports = {
   ],
   prefix: "",
   theme: {
+    fontFamily: {
+      sans: ["DM Sans", "sans-serif"],
+    },
     container: {
       center: true,
       padding: "2rem",
