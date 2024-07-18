@@ -40,6 +40,10 @@ function AuctionDetailPage() {
             Bidding Price &#8377;
             {Number(auction.currentPrice).toLocaleString()}
           </p>
+          <div className="border bg-muted rounded p-2 text-sm">
+            To be auctioned in 40 days Registration will close at 2:00 PM, (1)
+            working days before auction date
+          </div>
           <div className="py-2 flex space-x-4 inset-0">
             <span className="pt-1">
               <MapPinIcon className="w-5 h-5 " />
