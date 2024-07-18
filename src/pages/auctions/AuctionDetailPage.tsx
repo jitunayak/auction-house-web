@@ -28,7 +28,7 @@ function AuctionDetailPage() {
         {auction.name},{auction.location}
       </h1>
       <div className="py-2">{auction.description}</div>
-      <div className="grid grid-cols-2 space-x-10">
+      <div className="grid grid-cols-1  md:grid-cols-2 space-y-2 md:space-x-10">
         <div>
           <img src={auction.image[0]} className="w-[800px] rounded" />
           <div>{auction.type}</div>
@@ -68,7 +68,7 @@ function AuctionDetailPage() {
             </span>
           </div>
 
-          <div className="space-y-4 pt-10 flex-col md:space-x-4 md:flex-row">
+          <div className="space-y-4 pt-10 space-x-4 ">
             <Button variant={"outline"}>
               <BookmarkIcon className="w-4 h-4 mr-2" /> Watchlist
             </Button>
