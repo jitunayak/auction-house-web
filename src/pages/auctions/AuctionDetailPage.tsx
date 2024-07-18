@@ -19,11 +19,11 @@ function AuctionDetailPage() {
     fetch("/api/auctions/" + id)
       .then((res) => res.json())
       .then((auction) => setAuction(auction));
-  }, []);
+  });
 
   if (!auction) return <div>Loading...</div>;
   return (
-    <div className="p-10 mt-10">
+    <div className="p-10 mt-14 mx-16">
       <h1 className="text-3xl font-semibold">
         {auction.name},{auction.location}
       </h1>
