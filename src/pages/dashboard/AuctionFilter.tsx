@@ -27,9 +27,10 @@ function AuctionFilter() {
           <SelectContent>
             <SelectGroup>
               <SelectLabel>Auction Type</SelectLabel>
+              <SelectItem value="bank_bid">Bank Bid</SelectItem>
               <SelectItem value="tender_case">Tender Case</SelectItem>
               <SelectItem value="non_tender_case">Non Tender Case</SelectItem>
-              <SelectItem value="jom_bid">Jom Bid</SelectItem>
+              <SelectItem value="individual_bid">Individual Bid</SelectItem>
             </SelectGroup>
           </SelectContent>
         </Select>
@@ -39,10 +40,15 @@ function AuctionFilter() {
           </SelectTrigger>
           <SelectContent>
             <SelectGroup>
-              <SelectLabel>
-                {CURRENCY_SYMBOL}
-                {priceRange.at(0)?.toLocaleString()}-{CURRENCY_SYMBOL}
-                {priceRange.at(1)?.toLocaleString()}
+              <SelectLabel className="flex flex-row justify-between">
+                <div>
+                  {CURRENCY_SYMBOL}
+                  {priceRange.at(0)?.toLocaleString()}
+                </div>
+                <div>
+                  {CURRENCY_SYMBOL}
+                  {priceRange.at(1)?.toLocaleString()}
+                </div>
               </SelectLabel>
               <Slider
                 value={priceRange}
