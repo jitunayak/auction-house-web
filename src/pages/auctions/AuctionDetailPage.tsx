@@ -23,7 +23,7 @@ function AuctionDetailPage() {
 
   if (!auction) return <div>Loading...</div>;
   return (
-    <div className="p-10 mt-14 mx-16">
+    <div className="p-2 md:p-10 mt-14 mx-2 md:mx-16">
       <h1 className="text-3xl font-semibold">
         {auction.name},{auction.location}
       </h1>
@@ -64,7 +64,7 @@ function AuctionDetailPage() {
             </span>
           </div>
 
-          <div className="space-x-4 pt-10">
+          <div className="space-y-4 pt-10 flex-col md:space-x-4 md:flex-row">
             <Button variant={"outline"}>
               <BookmarkIcon className="w-4 h-4 mr-2" /> Watchlist
             </Button>
