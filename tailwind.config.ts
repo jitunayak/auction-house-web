@@ -12,7 +12,7 @@ module.exports = {
   prefix: "",
   theme: {
     fontFamily: {
-      sans: ["DM Sans", "sans-serif"],
+      sans: ["Inter", "DM Sans", "sans-serif"],
     },
     container: {
       center: true,

@@ -1,3 +1,4 @@
+import logo from "@/assets/logo_black.png";
 import { useAuthSlice } from "@/hooks/useAuthSlice";
 import { Link } from "@tanstack/react-router";
 import { Button } from "./ui/button";
@@ -14,17 +15,15 @@ function DashBoardNavbar() {
     });
   };
   return (
-    <header className="fixed top-0 right-0 left-0 w-full flex items-center justify-between  px-4 py-4 z-[100] backdrop-blur-lg shadow-sm">
+    <header className="fixed top-0 right-0 left-0 w-full bg-black flex items-center justify-between px-x py-2 z-[100] backdrop-blur-lg shadow-sm">
       <Link to="/" className="hidden md:block">
-        <div className="text-xl font-semibold bg-red-50 rounded text-red-600 p-1">
-          Auction House
-        </div>
+        <img src={logo} alt="logo" className=" aspect-auto h-[2.6rem]" />
       </Link>
-      <nav className="absolute left-[50%] transform translate-x-[-50%] hidden md:block">
-        <Input placeholder="Search" className="w-[400px]" />
+      <nav className="absolute left-[50%] transform translate-x-[-50%] hidden md:block bg-accent rounded">
+        <Input placeholder="Search" className="w-[400px] bg-accent " />
       </nav>
       <span className="flex gap-2">
-        <Button variant={"destructive"} onClick={handleLogout}>
+        <Button variant={"default"} onClick={handleLogout}>
           Logout
         </Button>
       </span>

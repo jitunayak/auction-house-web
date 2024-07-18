@@ -21,7 +21,7 @@ export default function Auctions() {
   if (!data) return <div>Loading...</div>;
 
   return (
-    <div className="mt-20 px-4 space-y-4 grid justify-center">
+    <div className="mt-10 px-4 space-y-4 grid justify-center">
       <h1 className="text-xl font-semibold">Upcoming Auctions</h1>
       <div className="w-fit grid  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         {data.map((auction) => (
