@@ -16,8 +16,12 @@ function DashBoardNavbar() {
   };
   return (
     <header className="fixed top-0 right-0 left-0 w-full bg-black flex items-center justify-between px-x py-2 z-[100] backdrop-blur-lg shadow-sm">
-      <Link to="/" className="hidden md:block">
-        <img src={logo} alt="logo" className=" aspect-auto h-[2.6rem]" />
+      <Link to="/" className="">
+        <img
+          src={logo}
+          alt="logo"
+          className=" aspect-auto h-[1.6rem] md:h-[2.6rem]"
+        />
       </Link>
       <nav className="absolute left-[50%] transform translate-x-[-50%] hidden md:block bg-accent rounded">
         <Input placeholder="Search" className="w-[400px] bg-accent " />

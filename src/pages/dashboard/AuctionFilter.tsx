@@ -18,7 +18,7 @@ function AuctionFilter() {
   return (
     <div className="mt-20 px-10">
       <h1 className="text-xl font-semibold pb-4"> Filters</h1>
-      <div className="flex gap-6">
+      <div className="flex md:flex-row gap-2 md:gap-6 flex-col">
         <StatesDropDown />
         <Select>
           <SelectTrigger className="w-[180px]">
