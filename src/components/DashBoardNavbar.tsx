@@ -3,6 +3,7 @@ import { useAuthSlice } from "@/hooks/useAuthSlice";
 import { Link } from "@tanstack/react-router";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
+import { ModeToggle } from "./ui/mode-toggle";
 
 function DashBoardNavbar() {
   const { user, setUser } = useAuthSlice();
@@ -27,6 +28,7 @@ function DashBoardNavbar() {
         <Input placeholder="Search" className="w-[400px] bg-accent " />
       </nav>
       <span className="flex gap-2">
+        <ModeToggle />
         <Button variant={"default"} onClick={handleLogout}>
           Logout
         </Button>

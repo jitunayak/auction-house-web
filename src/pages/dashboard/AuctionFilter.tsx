@@ -16,12 +16,12 @@ function AuctionFilter() {
   const [priceRange, setPriceRange] = useState([10000, 90000]);
 
   return (
-    <div className="mt-20 px-10">
+    <div className="mt-14 px-10 py-6 bg-zinc-100 dark:bg-zinc-800 shadow">
       <h1 className="text-xl font-semibold pb-4"> Filters</h1>
       <div className="flex md:flex-row gap-2 md:gap-6 flex-col">
         <StatesDropDown />
         <Select>
-          <SelectTrigger className="w-[180px]">
+          <SelectTrigger className="w-[180px] bg-white dark:bg-black">
             <SelectValue placeholder="Auction Type" />
           </SelectTrigger>
           <SelectContent>
@@ -34,7 +34,7 @@ function AuctionFilter() {
           </SelectContent>
         </Select>
         <Select>
-          <SelectTrigger className="w-[220px]">
+          <SelectTrigger className="w-[220px] bg-white dark:bg-black">
             <SelectValue placeholder="Price Range" />
           </SelectTrigger>
           <SelectContent>
