@@ -49,8 +49,8 @@ function AuctionFilter() {
                 onValueChange={(e) => setPriceRange(e)}
                 className="py-4"
                 defaultValue={[10000, 500000]}
-                max={10000000}
-                min={10000}
+                max={1000000}
+                min={1000}
                 step={1000}
               />
             </SelectGroup>
