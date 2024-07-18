@@ -51,4 +51,26 @@ export const handlers = [
       })),
     ] satisfies IAuction[]);
   }),
+
+  http.get("/api/auctions/:id", ({ params }) => {
+    return HttpResponse.json({
+      id: params.id,
+      name: "Alora Residence",
+      description: "Auction 1 description",
+      image: [
+        "https://hartabina.bidnow.my/medias/92/20240313172833.jpeg",
+        "https://hartabina.bidnow.my/medias/92/20240313172833.jpeg",
+      ],
+      bidDate: "2024-01-01T00:00:00.000Z",
+      endDate: "2022-01-01T00:00:00.000Z",
+      currentPrice: 430000,
+      highestBid: 450000,
+      highestBidder: "John Doe",
+      status: "Open",
+      type: "Residential",
+      location: "Chennai, India",
+      createdDate: "2024-01-01T00:00:00.000Z",
+      updatedDate: "2022-01-01T00:00:00.000Z",
+    });
+  }),
 ];
