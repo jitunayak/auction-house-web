@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import SparklesText from "@/components/ui/sparkles-text";
 import { CURRENCY_SYMBOL } from "@/types/enum";
+import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import Confetti from "react-confetti";
 
@@ -11,6 +12,7 @@ function Bidding() {
   const [bidInterval] = useState(5000);
   const [winned, setWinned] = useState(false);
   const [isBiddingClosed, setisBiddingClosed] = useState(false);
+
   useEffect(() => {
     const timer = setInterval(() => {
       if (timeLeft > 0) {
@@ -47,7 +49,7 @@ function Bidding() {
         </>
       )}
 
-      <div className="max-w-[600px] flex flex-col shadow-md space-y-4 mt-10 border p-10 rounded">
+      <div className="max-w-[600px] flex flex-col shadow-lg space-y-4 mt-10 p-10 rounded">
         <div className="py-6">
           <div className="text-zinc-400">Bidding Price </div>
           <div className="text-6xl font-semibold">
@@ -74,24 +76,28 @@ function Bidding() {
         </div>
         <div className="flex flex-wrap gap-2 ">
           {Array.from({ length: 3 }).map((_, i) => (
-            <div
+            <Button
               key={i}
+              disabled={isBiddingClosed}
               onClick={() => {
                 setPrice(price * (i + 2));
                 setTimeLeft(BID_TIME_LIMIT_IN_SECONDS);
               }}
-              className="cursor-pointer px-6 py-2 border border-green-500 text-green-600 hover:bg-black hover:text-white  bg-zinc-50 rounded-full"
+              variant={"outline"}
+              className="border-green-500 rounded-full hover:bg-green-50"
             >
               {CURRENCY_SYMBOL} {(price * (i + 2)).toLocaleString()}
-            </div>
+            </Button>
           ))}
         </div>
 
         {!winned && (
           <div className="flex space-x-4">
-            <Button size={"lg"} variant={"ghost"}>
-              Exit
-            </Button>
+            <Link to="/dashboard">
+              <Button size={"lg"} variant={"ghost"} className="py-6">
+                Exit
+              </Button>
+            </Link>
             <Button
               onClick={() => {
                 setWinned(true);
