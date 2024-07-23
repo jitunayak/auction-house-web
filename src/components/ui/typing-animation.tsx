@@ -34,8 +34,9 @@ export default function TypingAnimation({
 
   return (
     <h1
+      style={{ fontFamily: "Playwrite DK Loopet" }}
       className={ny(
-        "font-display text-center text-4xl font-bold leading-[5rem] tracking-[-0.02em] ",
+        "font-display text-center px-2  text-4xl font-extrabold leading-[5rem] tracking-[-0.02em] ",
         className
       )}
     >
