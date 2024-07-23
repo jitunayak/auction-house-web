@@ -14,6 +14,7 @@ import { Route as rootRoute } from './routes/__root'
 import { Route as OnboardImport } from './routes/onboard'
 import { Route as DashboardImport } from './routes/dashboard'
 import { Route as IndexImport } from './routes/index'
+import { Route as BiddingIdImport } from './routes/bidding/$id'
 import { Route as AuctionsIdImport } from './routes/auctions/$id'
 
 // Create/Update Routes
@@ -30,6 +31,11 @@ const DashboardRoute = DashboardImport.update({
 
 const IndexRoute = IndexImport.update({
   path: '/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const BiddingIdRoute = BiddingIdImport.update({
+  path: '/bidding/$id',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -70,6 +76,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuctionsIdImport
       parentRoute: typeof rootRoute
     }
+    '/bidding/$id': {
+      id: '/bidding/$id'
+      path: '/bidding/$id'
+      fullPath: '/bidding/$id'
+      preLoaderRoute: typeof BiddingIdImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
@@ -80,6 +93,7 @@ export const routeTree = rootRoute.addChildren({
   DashboardRoute,
   OnboardRoute,
   AuctionsIdRoute,
+  BiddingIdRoute,
 })
 
 /* prettier-ignore-end */
@@ -93,7 +107,8 @@ export const routeTree = rootRoute.addChildren({
         "/",
         "/dashboard",
         "/onboard",
-        "/auctions/$id"
+        "/auctions/$id",
+        "/bidding/$id"
       ]
     },
     "/": {
@@ -107,6 +122,9 @@ export const routeTree = rootRoute.addChildren({
     },
     "/auctions/$id": {
       "filePath": "auctions/$id.tsx"
+    },
+    "/bidding/$id": {
+      "filePath": "bidding/$id.tsx"
     }
   }
 }

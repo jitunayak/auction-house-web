@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { IAuction } from "@/types";
-import { useParams } from "@tanstack/react-router";
+import { Link, useParams } from "@tanstack/react-router";
 import {
   BookmarkIcon,
   CalendarIcon,
@@ -72,9 +72,11 @@ function AuctionDetailPage() {
             <Button variant={"outline"}>
               <BookmarkIcon className="w-4 h-4 mr-2" /> Watchlist
             </Button>
-            <Button className="bg-amber-500 ">
-              <GavelIcon className="w-4 h-4 mr-2" /> Bid Now
-            </Button>
+            <Link to={`/bidding/${id}`}>
+              <Button className="bg-amber-500 ">
+                <GavelIcon className="w-4 h-4 mr-2" /> Bid Now
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
