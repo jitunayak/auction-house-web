@@ -20,12 +20,12 @@ function Home() {
             <Globe className="top-28 " />
           </div>
 
-          <Link to="/onboard">
+          <Link to="/demo-request">
             <ShineBorder
-              className="text-center text-lg font-bold capitalize mt-6"
+              className="text-center text-lg  capitalize mt-6"
               color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
             >
-              Get started
+              Request for Demo
             </ShineBorder>
           </Link>
         </div>

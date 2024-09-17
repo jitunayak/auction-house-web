@@ -12,6 +12,7 @@
 
 import { Route as rootRoute } from './routes/__root'
 import { Route as OnboardImport } from './routes/onboard'
+import { Route as DemoRequestImport } from './routes/demo-request'
 import { Route as DashboardImport } from './routes/dashboard'
 import { Route as IndexImport } from './routes/index'
 import { Route as BiddingIdImport } from './routes/bidding/$id'
@@ -21,6 +22,11 @@ import { Route as AuctionsIdImport } from './routes/auctions/$id'
 
 const OnboardRoute = OnboardImport.update({
   path: '/onboard',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const DemoRequestRoute = DemoRequestImport.update({
+  path: '/demo-request',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -62,6 +68,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardImport
       parentRoute: typeof rootRoute
     }
+    '/demo-request': {
+      id: '/demo-request'
+      path: '/demo-request'
+      fullPath: '/demo-request'
+      preLoaderRoute: typeof DemoRequestImport
+      parentRoute: typeof rootRoute
+    }
     '/onboard': {
       id: '/onboard'
       path: '/onboard'
@@ -91,6 +104,7 @@ declare module '@tanstack/react-router' {
 export const routeTree = rootRoute.addChildren({
   IndexRoute,
   DashboardRoute,
+  DemoRequestRoute,
   OnboardRoute,
   AuctionsIdRoute,
   BiddingIdRoute,
@@ -106,6 +120,7 @@ export const routeTree = rootRoute.addChildren({
       "children": [
         "/",
         "/dashboard",
+        "/demo-request",
         "/onboard",
         "/auctions/$id",
         "/bidding/$id"
@@ -116,6 +131,9 @@ export const routeTree = rootRoute.addChildren({
     },
     "/dashboard": {
       "filePath": "dashboard.tsx"
+    },
+    "/demo-request": {
+      "filePath": "demo-request.tsx"
     },
     "/onboard": {
       "filePath": "onboard.tsx"
