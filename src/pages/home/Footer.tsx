@@ -38,6 +38,32 @@ export default function Footer() {
     },
   ];
 
+  const partnerBanks = [
+    {
+      id: "1",
+      thumbnail:
+        "https://static.brandirectory.com/logos/icib001_icici_bank.png",
+      title: "ICICI",
+    },
+    {
+      id: "2",
+      thumbnail:
+        "https://1000logos.net/wp-content/uploads/2021/06/HDFC-Bank-logo.png",
+      title: "HDFC",
+    },
+    {
+      id: "3",
+      thumbnail:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Axis_Bank_logo.svg/1200px-Axis_Bank_logo.svg.png",
+      title: "AXIS",
+    },
+    {
+      id: "4",
+      thumbnail:
+        "https://www.hexafin.com/wp-content/uploads/2024/06/4i-removebg-preview.png",
+      title: "Indusind",
+    },
+  ];
   return (
     <div className="min-h-screen bg-background mt-16">
       {/* Featured Auctions */}
@@ -114,6 +140,34 @@ export default function Footer() {
             ))}
           </div>
         </div>
+
+        {/* Bank Partnerships */}
+        <section className="py-16 px-4 bg-muted">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold mb-8 text-center">
+              Trusted by Leading Banks
+            </h2>
+            <p className="text-center mb-12 text-muted-foreground">
+              Our partnerships with major financial institutions ensure secure
+              and reliable transactions
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+              {partnerBanks.map((bank) => (
+                <div key={bank.id} className="flex justify-center">
+                  <img
+                    src={bank.thumbnail}
+                    alt={`Partner Bank ${bank}`}
+                    className="w-[200px] object-cover  transition-all duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+            <span className="text-sm text-zinc-400 text-center">
+              *note, auction house doesn't have official tie ups with these
+              banks for the time being
+            </span>
+          </div>
+        </section>
       </section>
 
       {/* Call to Action */}
