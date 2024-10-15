@@ -1,16 +1,5 @@
 [
   {
-    "id": 4023,
-    "name": "Andaman and Nicobar Islands",
-    "country_id": 101,
-    "country_code": "IN",
-    "country_name": "India",
-    "state_code": "AN",
-    "type": "Union territory",
-    "latitude": "11.74008670",
-    "longitude": "92.65864010"
-  },
-  {
     "id": 4017,
     "name": "Andhra Pradesh",
     "country_id": 101,
@@ -75,17 +64,6 @@
     "type": "state",
     "latitude": "21.27865670",
     "longitude": "81.86614420"
-  },
-  {
-    "id": 4033,
-    "name": "Dadra and Nagar Haveli and Daman and Diu",
-    "country_id": 101,
-    "country_code": "IN",
-    "country_name": "India",
-    "state_code": "DH",
-    "type": "Union territory",
-    "latitude": "20.39737360",
-    "longitude": "72.83279910"
   },
   {
     "id": 4021,
