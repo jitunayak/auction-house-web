@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -44,35 +45,34 @@ export default function Auctions() {
                   alt={auction.name}
                   className="rounded pb-2 h-[200px] w-full object-cover"
                 />
-                <p>
-                  Bidding Price &#8377;
-                  {Number(auction.currentPrice).toLocaleString()}
-                </p>
+
                 <div className="py-2 flex space-x-4 inset-0">
                   <span className="pt-1">
-                    <MapPinIcon className="w-5 h-5 " />
+                    <MapPinIcon className="w-4 h-4 " />
                   </span>
                   <span>
                     <span>
-                      <p className="text-zinc-400 font-light">Location</p>
-                      <p className="text-sm font-semibold">
-                        {auction.location}
-                      </p>
+                      <p className="text-zinc-400 text-sm">Location</p>
+                      <p className="text-sm ">{auction.location}</p>
                     </span>
                   </span>
                 </div>
 
                 <div className="py-2 flex space-x-4 inset-0">
                   <span className="pt-1">
-                    <CalendarIcon className="w-5 h-5 " />
+                    <CalendarIcon className="w-4 h-4 " />
                   </span>
                   <span>
-                    <p className="text-zinc-400 font-light">Auction Date </p>
-                    <p className="text-sm font-semibold">
+                    <p className="text-zinc-400 text-sm">Auction Date </p>
+                    <p className="text-sm ">
                       {new Date(auction.bidDate).toLocaleString()}
                     </p>
                   </span>
                 </div>
+                <Button size={"sm"} className="w-full mt-6">
+                  Bid for &#8377;
+                  {Number(auction.currentPrice).toLocaleString()}
+                </Button>
               </CardContent>
             </Card>
           </div>
