@@ -1,7 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Globe from "@/components/ui/globe";
 import ShineBorder from "@/components/ui/shine-border";
-import { Link } from "@tanstack/react-router";
 import Footer from "./Footer";
 
 function Home() {
@@ -20,14 +19,17 @@ function Home() {
           A platform for buying and selling prepossessed cars, houses, plots,
           golds, etc.
         </div>
-        <Link to="/demo-request">
+        <a
+          target="_blank"
+          href="https://app.formbricks.com/s/cm2dnk050000cjl3dsz7ebrej"
+        >
           <ShineBorder
             className="text-center text-sm  capitalize mt-6"
             color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
           >
-            Request for Demo
+            Request to connect
           </ShineBorder>
-        </Link>
+        </a>
       </div>
       <Footer />
     </>

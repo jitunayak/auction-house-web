@@ -172,6 +172,13 @@ export default function Footer() {
 
       {/* Call to Action */}
       <section className="py-16 px-4">
+        {/* <div className="relative h-80 overflow-auto mb-16">
+          <iframe
+            src="https://app.formbricks.com/s/cm2dnk050000cjl3dsz7ebrej?embed=true"
+            className="absolute h-full w-full"
+          ></iframe>
+        </div> */}
+
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">
             Stay Updated on Exclusive Auctions
