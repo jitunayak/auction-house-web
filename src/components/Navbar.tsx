@@ -35,7 +35,9 @@ function Navbar() {
         <Link to="/onboard">
           <Button variant="ghost">Sign Up</Button>
         </Link>
-        <Button>Sign In</Button>
+        <Link to="/onboard">
+          <Button>Sign In</Button>
+        </Link>
       </span>
     </header>
   );
