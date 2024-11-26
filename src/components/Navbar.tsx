@@ -32,11 +32,12 @@ function Navbar() {
         </ul>
       </nav>
       <span className="flex gap-2">
+        <a href="https://partner.ahouse.in" target="_blank">
+          <Button variant="secondary">Partner Login</Button>
+        </a>
+
         <Link to="/onboard">
-          <Button variant="ghost">Sign Up</Button>
-        </Link>
-        <Link to="/onboard">
-          <Button>Sign In</Button>
+          <Button> User Login</Button>
         </Link>
       </span>
     </header>
