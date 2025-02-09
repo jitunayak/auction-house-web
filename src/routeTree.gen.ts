@@ -11,6 +11,7 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as PrivacyPolicyImport } from './routes/privacy-policy'
 import { Route as OnboardImport } from './routes/onboard'
 import { Route as DemoRequestImport } from './routes/demo-request'
 import { Route as DashboardImport } from './routes/dashboard'
@@ -19,6 +20,11 @@ import { Route as BiddingIdImport } from './routes/bidding/$id'
 import { Route as AuctionsIdImport } from './routes/auctions/$id'
 
 // Create/Update Routes
+
+const PrivacyPolicyRoute = PrivacyPolicyImport.update({
+  path: '/privacy-policy',
+  getParentRoute: () => rootRoute,
+} as any)
 
 const OnboardRoute = OnboardImport.update({
   path: '/onboard',
@@ -82,6 +88,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OnboardImport
       parentRoute: typeof rootRoute
     }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyImport
+      parentRoute: typeof rootRoute
+    }
     '/auctions/$id': {
       id: '/auctions/$id'
       path: '/auctions/$id'
@@ -106,6 +119,7 @@ export const routeTree = rootRoute.addChildren({
   DashboardRoute,
   DemoRequestRoute,
   OnboardRoute,
+  PrivacyPolicyRoute,
   AuctionsIdRoute,
   BiddingIdRoute,
 })
@@ -122,6 +136,7 @@ export const routeTree = rootRoute.addChildren({
         "/dashboard",
         "/demo-request",
         "/onboard",
+        "/privacy-policy",
         "/auctions/$id",
         "/bidding/$id"
       ]
@@ -137,6 +152,9 @@ export const routeTree = rootRoute.addChildren({
     },
     "/onboard": {
       "filePath": "onboard.tsx"
+    },
+    "/privacy-policy": {
+      "filePath": "privacy-policy.tsx"
     },
     "/auctions/$id": {
       "filePath": "auctions/$id.tsx"

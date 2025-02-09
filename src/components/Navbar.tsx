@@ -24,7 +24,7 @@ function Navbar() {
             <Link>Services</Link>
           </li>
           <li>
-            <Link>Blog</Link>
+            <Link to="/privacy-policy">Privacy Policy</Link>
           </li>
           <li>
             <Link>Contact</Link>
