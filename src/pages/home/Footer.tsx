@@ -127,6 +127,7 @@ export default function Footer() {
         </div>
       </section>
 
+      {/* screenshots */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-8">App Screenshots</h2>
@@ -135,7 +136,7 @@ export default function Footer() {
               <img
                 src={src}
                 alt={`App Screenshot ${index + 1}`}
-                className="w-[280px] object-cover saturate-[1.4]"
+                className="w-[280px] object-cover saturate-[1.4] hover:scale-105 animate ease-in-out delay-100 duration-300"
               />
             ))}
           </div>
