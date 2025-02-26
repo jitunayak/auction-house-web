@@ -139,22 +139,6 @@ export default function Footer() {
               />
             ))}
           </div>
-          <div className="mt-8 space-x-4">
-            <Button
-              className="bg-green-600 hover:bg-green-500"
-              href="https://play.google.com/store"
-              target="_blank"
-            >
-              Play Store
-            </Button>
-            <Button
-              as="a"
-              href="https://www.apple.com/app-store/"
-              target="_blank"
-            >
-              App Store
-            </Button>
-          </div>
         </div>
       </section>
 
