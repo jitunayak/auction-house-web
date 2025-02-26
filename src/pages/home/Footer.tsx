@@ -1,3 +1,13 @@
+import screenshot1 from "@/assets/app_screenshots/shot1.png";
+import screenshot2 from "@/assets/app_screenshots/shot2.png";
+import screenshot3 from "@/assets/app_screenshots/shot3.png";
+import screenshot4 from "@/assets/app_screenshots/shot4.png";
+import screenshot5 from "@/assets/app_screenshots/shot5.png";
+import screenshot6 from "@/assets/app_screenshots/shot6.png";
+import screenshot7 from "@/assets/app_screenshots/shot7.png";
+import screenshot8 from "@/assets/app_screenshots/shot8.png";
+import screenshot9 from "@/assets/app_screenshots/shot9.png";
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -11,6 +21,17 @@ import { Input } from "@/components/ui/input";
 import { CURRENCY_SYMBOL } from "@/types/enum";
 import { Calendar, Clock, IndianRupee } from "lucide-react";
 
+const screenshots = [
+  screenshot1,
+  screenshot2,
+  screenshot3,
+  screenshot4,
+  screenshot5,
+  screenshot6,
+  screenshot7,
+  screenshot8,
+  screenshot9,
+];
 export default function Footer() {
   const featuredAuctions = [
     {
@@ -102,6 +123,37 @@ export default function Footer() {
                 </CardFooter>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-8">App Screenshots</h2>
+          <div className="flex flex-wrap gap-16 justify-center">
+            {screenshots.map((src, index) => (
+              <img
+                src={src}
+                alt={`App Screenshot ${index + 1}`}
+                className="w-[280px] object-cover"
+              />
+            ))}
+          </div>
+          <div className="mt-8 space-x-4">
+            <Button
+              className="bg-green-600 hover:bg-green-500"
+              href="https://play.google.com/store"
+              target="_blank"
+            >
+              Play Store
+            </Button>
+            <Button
+              as="a"
+              href="https://www.apple.com/app-store/"
+              target="_blank"
+            >
+              App Store
+            </Button>
           </div>
         </div>
       </section>
