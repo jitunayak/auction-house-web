@@ -135,7 +135,7 @@ export default function Footer() {
               <img
                 src={src}
                 alt={`App Screenshot ${index + 1}`}
-                className="w-[280px] object-cover saturate-150"
+                className="w-[280px] object-cover saturate-[1.4]"
               />
             ))}
           </div>
