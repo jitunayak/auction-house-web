@@ -1,5 +1,6 @@
-import screenshot1 from "@/assets/app_screenshots/shot1.png";
-import screenshot2 from "@/assets/app_screenshots/shot2.png";
+import screenshot1 from "@/assets/app_screenshots/shot10.png";
+// import screenshot10 from "@/assets/app_screenshots/shot10.png";
+import screenshot2 from "@/assets/app_screenshots/shot11.png";
 import screenshot3 from "@/assets/app_screenshots/shot3.png";
 import screenshot4 from "@/assets/app_screenshots/shot4.png";
 import screenshot5 from "@/assets/app_screenshots/shot5.png";
